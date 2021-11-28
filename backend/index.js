@@ -10,7 +10,7 @@ app.use(express.json());
 
 // Available Routes
 app.use('/api/auth', require('./route/auth'));
-// app.use('/api/sessions', require('./routes/sessions'));
+app.use('/api/sessions', require('./route/sessions'));
 
 // listening the app
 app.listen(port, () => {
