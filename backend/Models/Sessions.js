@@ -21,6 +21,10 @@ const SessionsSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    zoomid:{
+        type: String,
+        required: true
+    },
     coach:{
         type: String,
         default: 'Shipy Singh'
