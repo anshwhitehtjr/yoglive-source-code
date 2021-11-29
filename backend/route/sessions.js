@@ -22,8 +22,8 @@ router.get('/fetchallsessions/', fetchuser, async (req, res) => {
 });
 //#endregion
 
-//#region ROUTE 2: Add a new Class using: POST "/api/sessions/addsession". Login required
-router.post('/addsession', fetchuser, async (req, res) => {
+//#region ROUTE 2: Add a new Session using: POST "/api/sessions/addsession". Login required
+router.post('/addsession/AnShBaLaJiThAkUrIsAgOoDbOOY123123', fetchuser, async (req, res) => {
     try {
         const { zoomid, title, desc, dateToJoin, coach, price } = req.body;
 
@@ -38,7 +38,7 @@ router.post('/addsession', fetchuser, async (req, res) => {
             zoomid, title, desc, dateToJoin, coach, price, user: req.user.id
         });
 
-        const savedSession = await Sessions.save();
+        const savedSession = await sessions.save();
         res.json(savedSession);
 
     } catch (error) {
